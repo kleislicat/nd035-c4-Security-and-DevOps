@@ -1,0 +1,126 @@
+Started by user John
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/myFirstJob
+The recommended git tool is: NONE
+using credential c8b85d15-82ef-4ee4-b6ff-439ae41cecd0
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/myFirstJob/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:kleislicat/nd035-c4-Security-and-DevOps.git # timeout=10
+Fetching upstream changes from git@github.com:kleislicat/nd035-c4-Security-and-DevOps.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_SSH to set credentials 
+Verifying host key using known hosts file
+ > git fetch --tags --force --progress -- git@github.com:kleislicat/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 5b1b787cefe63b1f49c84ddcd6abd5dab55ffabe (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5b1b787cefe63b1f49c84ddcd6abd5dab55ffabe # timeout=10
+Commit message: "Tests weren't being run from the command line but were from the ide. Fixed now, so jenkins build sees this."
+ > git rev-list --no-walk 5b1b787cefe63b1f49c84ddcd6abd5dab55ffabe # timeout=10
+[myFirstJob] $ mvn -f starter_code/pom.xml package
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.example:auth-course[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding auth-course 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:resources[m [1m(default-resources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:testResources[m [1m(default-testResources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/myFirstJob/starter_code/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.5.0:test[m [1m(default-test)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using configured provider org.apache.maven.surefire.junitcore.JUnitCoreProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+[30m2024-08-29T00:48:41,863[m [32mINFO  [m[[1;34mmain[m] [1;33mStartupInfoLogger[m: Starting SareetaApplicationTests using Java 17.0.12 on f1877e88bbea with PID 4960 (started by jenkins in /var/jenkins_home/workspace/myFirstJob/starter_code)
+[30m2024-08-29T00:48:41,868[m [32mINFO  [m[[1;34mmain[m] [1;33mSpringApplication[m: No active profile set, falling back to default profiles: default
+[30m2024-08-29T00:48:42,074[m [32mINFO  [m[[1;34mmain[m] [1;33mRepositoryConfigurationDelegate[m: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[30m2024-08-29T00:48:42,099[m [32mINFO  [m[[1;34mmain[m] [1;33mRepositoryConfigurationDelegate[m: Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+[30m2024-08-29T00:48:42,415[m [32mINFO  [m[[1;34mmain[m] [1;33mLogHelper[m: HHH000204: Processing PersistenceUnitInfo [name: default]
+[30m2024-08-29T00:48:42,435[m [32mINFO  [m[[1;34mmain[m] [1;33mVersion[m: HHH000412: Hibernate ORM core version 5.4.30.Final
+[30m2024-08-29T00:48:42,485[m [32mINFO  [m[[1;34mmain[m] [1;33mJavaReflectionManager[m: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[30m2024-08-29T00:48:42,524[m [32mINFO  [m[[1;34mmain[m] [1;33mHikariDataSource[m: HikariPool-1 - Starting...
+[30m2024-08-29T00:48:42,600[m [32mINFO  [m[[1;34mmain[m] [1;33mHikariDataSource[m: HikariPool-1 - Start completed.
+[30m2024-08-29T00:48:42,607[m [32mINFO  [m[[1;34mmain[m] [1;33mDialect[m: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[30m2024-08-29T00:48:42,979[m [32mINFO  [m[[1;34mmain[m] [1;33mJtaPlatformInitiator[m: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[30m2024-08-29T00:48:42,989[m [32mINFO  [m[[1;34mmain[m] [1;33mAbstractEntityManagerFactoryBean[m: Initialized JPA EntityManagerFactory for persistence unit 'default'
+[30m2024-08-29T00:48:43,218[m [33mWARN  [m[[1;34mmain[m] [1;33mJpaBaseConfiguration$JpaWebConfiguration[m: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[30m2024-08-29T00:48:43,439[m [32mINFO  [m[[1;34mmain[m] [1;33mDefaultSecurityFilterChain[m: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@99948fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@5354bfce, org.springframework.security.web.header.HeaderWriterFilter@2d1f9ec3, org.springframework.web.filter.CorsFilter@4c31b6c2, org.springframework.security.web.authentication.logout.LogoutFilter@5e94947e, com.example.demo.security.JWTAuthenticationFilter@5605a59b, com.example.demo.security.JWTAuthenticationVerficationFilter@4e8b36af, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4220468, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@198524ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d164938, org.springframework.security.web.session.SessionManagementFilter@d1973e8, org.springframework.security.web.access.ExceptionTranslationFilter@2fd05b15, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3792fed8]
+[30m2024-08-29T00:48:43,509[m [32mINFO  [m[[1;34mmain[m] [1;33mExecutorConfigurationSupport[m: Initializing ExecutorService 'applicationTaskExecutor'
+[30m2024-08-29T00:48:43,603[m [32mINFO  [m[[1;34mmain[m] [1;33mStartupInfoLogger[m: Started SareetaApplicationTests in 1.906 seconds (JVM running for 2.362)
+[[1;34mINFO[m] Running com.example.demo.[1mSareetaApplicationTests[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s -- in com.example.demo.[1mSareetaApplicationTests[m
+[[1;34mINFO[m] Running com.example.demo.controllers.[1mItemControllerTest[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s -- in com.example.demo.controllers.[1mItemControllerTest[m
+[[1;34mINFO[m] Running com.example.demo.controllers.[1mOrderControllerTest[m
+[30m2024-08-29T00:48:43,762[m [32mINFO  [m[[1;34mmain[m] [1;33mOrderController[m: OrderController.getOrdersForUser(): request by user.
+[30m2024-08-29T00:48:43,763[m [32mINFO  [m[[1;34mmain[m] [1;33mOrderController[m: OrderController.submit(): request by nonExistentUser.
+[30m2024-08-29T00:48:43,763[m [1;31mERROR [m[[1;34mmain[m] [1;33mOrderController[m: OrderController.submit(): Exception: user nonExistentUser doesn't exist.
+[30m2024-08-29T00:48:43,764[m [32mINFO  [m[[1;34mmain[m] [1;33mOrderController[m: OrderController.getOrdersForUser(): request by nonExistentUser.
+[30m2024-08-29T00:48:43,765[m [1;31mERROR [m[[1;34mmain[m] [1;33mOrderController[m: OrderController.getOrdersForUser(): Exception: user nonExistentUser doesn't exist.
+[30m2024-08-29T00:48:43,765[m [32mINFO  [m[[1;34mmain[m] [1;33mOrderController[m: OrderController.submit(): request by user.
+[30m2024-08-29T00:48:43,783[m [32mINFO  [m[[1;34mmain[m] [1;33mOrderController[m: OrderController.submit(): New order {"id":null,"items":[{"id":1,"name":"Round Widget","price":2.99,"description":"A widget that is round"}],"user":{"id":1,"username":"user"},"total":2.99} was created successfully. 
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s -- in com.example.demo.controllers.[1mOrderControllerTest[m
+[[1;34mINFO[m] Running com.example.demo.controllers.[1mUserControllerTest[m
+[30m2024-08-29T00:48:43,804[m [32mINFO  [m[[1;34mmain[m] [1;33mUserController[m: UserController.createUser(): createUserRequest {"username":"user","password":"pass","confirmPassword":"pass"}.
+[30m2024-08-29T00:48:43,804[m [1;31mERROR [m[[1;34mmain[m] [1;33mUserController[m: UserController.createUser(): Exception: User 'user' was not created, because password is less than 7 characters or password does not match.
+[30m2024-08-29T00:48:43,805[m [32mINFO  [m[[1;34mmain[m] [1;33mUserController[m: UserController.createUser(): createUserRequest {"username":"user","password":"password","confirmPassword":"password"}.
+[30m2024-08-29T00:48:43,805[m [32mINFO  [m[[1;34mmain[m] [1;33mUserController[m: UserController.createUser(): New user 'user' created successfully.
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in com.example.demo.controllers.[1mUserControllerTest[m
+[[1;34mINFO[m] Running com.example.demo.controllers.[1mCartControllerTest[m
+[30m2024-08-29T00:48:43,807[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.addTocart(): request {"username":"user","itemId":1,"quantity":5}.
+[30m2024-08-29T00:48:43,809[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): ModifyCartRequest {"username":"user","itemId":1,"quantity":5}.
+[30m2024-08-29T00:48:43,811[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): cart before remove {"id":1,"items":[{"id":1,"name":"Round Widget","price":2.99,"description":"A widget that is round"}],"user":{"id":1,"username":"user"},"total":2.99}.
+[30m2024-08-29T00:48:43,814[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): cart after remove {"id":1,"items":[],"user":{"id":1,"username":"user"},"total":-11.96}.
+[30m2024-08-29T00:48:43,814[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): itemId '1' was successfully removed.
+[30m2024-08-29T00:48:43,815[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.addTocart(): request {"username":null,"itemId":1,"quantity":5}.
+[30m2024-08-29T00:48:43,815[m [1;31mERROR [m[[1;34mmain[m] [1;33mCartController[m: CartController.addTocart(): Exception: user null doesn't exist.
+[30m2024-08-29T00:48:43,816[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): ModifyCartRequest {"username":"user","itemId":67,"quantity":5}.
+[30m2024-08-29T00:48:43,816[m [1;31mERROR [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): Exception: itemId '67' not found.
+[30m2024-08-29T00:48:43,817[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): ModifyCartRequest {"username":null,"itemId":1,"quantity":5}.
+[30m2024-08-29T00:48:43,817[m [1;31mERROR [m[[1;34mmain[m] [1;33mCartController[m: CartController.removeFromcart(): Exception: user 'null' doesn't exist. 
+[30m2024-08-29T00:48:43,819[m [32mINFO  [m[[1;34mmain[m] [1;33mCartController[m: CartController.addTocart(): request {"username":"user","itemId":1,"quantity":5}.
+[30m2024-08-29T00:48:43,819[m [1;31mERROR [m[[1;34mmain[m] [1;33mCartController[m: CartController.addTocart(): Exception: Item 1 not found.
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.example.demo.controllers.[1mCartControllerTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 19, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.1.1:jar[m [1m(default-jar)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.5:repackage[m [1m(repackage)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Replacing main artifact with repackaged archive
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  3.533 s
+[[1;34mINFO[m] Finished at: 2024-08-29T00:48:44Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Finished: SUCCESS
